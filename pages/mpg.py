@@ -42,7 +42,7 @@ st.line_chart(mpg["mpg"])
 
 st.bar_chart(mpg["mpg"])
 
-fig, ax = plt.subplots(fig_size=(10, 3))
+fig, ax = plt.subplots(figsize=(10, 3))
 sns.countplot(data=mpg, x="origin").set_title("지역별 자동차 연비 데이터 수")
 st.pyplot(fig)
 
