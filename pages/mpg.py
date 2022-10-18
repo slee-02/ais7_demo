@@ -36,25 +36,6 @@ if selected_year > 0 :
 if len(selected_origin) > 0:
    mpg = mpg[mpg.origin.isin(selected_origin)]
 
-'''
-st.sidebar.header('User Input Features')
-selected_year = st.sidebar.selectbox('Year',
-   list(reversed(range(data.model_year.min(),data.model_year.max())))
-   )
-
-if selected_year > 0 :
-   data = data[data.model_year == selected_year]
-
-
-# Sidebar - origin
-sorted_unique_origin = sorted(data.origin.unique())
-selected_origin = st.sidebar.multiselect('origin', sorted_unique_origin, sorted_unique_origin)
-
-
-if len(selected_origin) > 0:
-   data = data[data.origin.isin(selected_origin)]
-'''
-
 st.dataframe(mpg)
 
 st.line_chart(mpg["mpg"])
